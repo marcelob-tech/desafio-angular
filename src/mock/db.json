@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "foto": "",
+      "nome": "teste1",
+      "email": "teste1@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "19/07/2022"
+    },
+    {
+      "id": 2,
+      "foto": "",
+      "nome": "teste2",
+      "email": "teste2@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "17/07/2022"
+    },
+    {
+      "id": 3,
+      "foto": "",
+      "nome": "teste3",
+      "email": "teste@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "14/07/2022"
+    },
+    {
+      "id": 4,
+      "foto": "",
+      "nome": "teste4",
+      "email": "teste4@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "12/07/2022"
+    },
+    {
+      "id": 5,
+      "foto": "",
+      "nome": "teste5",
+      "email": "teste5@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "10/07/2022"
+    },
+    {
+      "id": 6,
+      "foto": "",
+      "nome": "teste6",
+      "email": "teste6@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "09/07/2022"
+    },
+    {
+      "id": 7,
+      "foto": "",
+      "nome": "teste7",
+      "email": "teste7@email.com.br",
+      "emailSecundario": "",
+      "dataAdicionado": "05/07/2022"
+    },
+    {
+      "id": 8,
+      "foto": "",
+      "nome": "teste8",
+      "email": "teste8@email.com.br",
+      "emailSecundario": "testeSecundario8@email.com.br",
+      "dataAdicionado": "19/07/2022"
+    }
+  ]
+}
