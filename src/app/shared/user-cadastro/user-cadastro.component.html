@@ -1,1 +1,26 @@
-<p>user-cadastro works!</p>
+<!-- 	id: number;
+	foto?: string;
+	nome: string;
+	email: string;
+	emailSecundario?: string;
+	dataAdicionado: Date; -->
+<div class="container d-flex justify-content-center">
+	<p>user-cadastro works!</p>
+	<form [formGroup]="userForm" class="mt-xl-5 d-flex justify-content-center col-8 flex-column">
+		<input type="hidden" name="id" formControlName="id" id="id" [(ngModel)]="id">
+		<!-- <label for="foto" class="form-label mt-2 foto-img">Foto</label>
+		<input type="image" formControlName="foto" class="form-control mt-2" id="foto" /> -->
+		<app-img-input ngDefaultControl formControlName="imgUrl" [(ngModel)]="imgUrl" class="d-flex justify-content-center"></app-img-input>
+		<label for="nome" class="form-label mt-2">Nome</label>
+		<input type="text" formControlName="nome" class="form-control mt-2" id="nome" />
+		<div *ngIf="subimited && get['nome'].errors">
+			<div *ngIf="get['nome'].errors['required']">Nome é obrigatório</div>
+		</div>
+		<label for="email" class="form-label mt-2">Email</label>
+		<input type="email" formControlName="email" class="form-control mt-2" id="email" />
+		<label for="emailSecundario" class="form-label mt-2">E-mail Alternativo</label>
+		<input type="email" formControlName="emailSecundario" class="form-control mt-2" id="emailSecundario" />
+
+		<button type="submit" class="btn btn-primary mt-5" (click)="submit(userForm)">Salvar</button>
+	</form>
+</div>
