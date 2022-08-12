@@ -4,23 +4,47 @@
 	email: string;
 	emailSecundario?: string;
 	dataAdicionado: Date; -->
-<div class="container d-flex justify-content-center">
-	<p>user-cadastro works!</p>
-	<form [formGroup]="userForm" class="mt-xl-5 d-flex justify-content-center col-8 flex-column">
-		<input type="hidden" name="id" formControlName="id" id="id" [(ngModel)]="id">
+<div class="d-flex mt-5 justify-content-center">
+	<form [formGroup]="userForm" class="mt-5 d-flex justify-content-center col-8 flex-column">
+		<!-- <input type="hidden" name="id" formControlName="id" id="id"> -->
 		<!-- <label for="foto" class="form-label mt-2 foto-img">Foto</label>
 		<input type="image" formControlName="foto" class="form-control mt-2" id="foto" /> -->
-		<app-img-input ngDefaultControl formControlName="imgUrl" [(ngModel)]="imgUrl" class="d-flex justify-content-center"></app-img-input>
+		<app-img-input #img ngDefaultControl formControlName="imgUrl" class="d-flex justify-content-center"></app-img-input>
 		<label for="nome" class="form-label mt-2">Nome</label>
 		<input type="text" formControlName="nome" class="form-control mt-2" id="nome" />
-		<div *ngIf="subimited && get['nome'].errors">
-			<div *ngIf="get['nome'].errors['required']">Nome é obrigatório</div>
+		<div class="mt-3 alert alert-danger" role="alert" *ngIf="fg.hasError('isEmpty') && fg.get('nome').value === '' && fg.get('nome').dirty ">
+			Input Nome é obrigatório!
 		</div>
+		<!-- <div *ngIf="subimited && get['nome']?.errors">
+			<div *ngIf="get['nome']?.errors['required']">Nome é obrigatório</div>
+		</div> -->
 		<label for="email" class="form-label mt-2">Email</label>
 		<input type="email" formControlName="email" class="form-control mt-2" id="email" />
+		<div class="mt-3 alert alert-danger" role="alert" *ngIf="fg.hasError('isEmpty')">
+			empty
+		</div>
+		<div class="mt-3 alert alert-danger" role="alert" *ngIf="fg.hasError('isEmpty') && fg.get('email').value === '' && fg.get('email').dirty ">
+			Input E-mail é obrigatório!
+		</div>
+		<div class="mt-3 alert alert-danger" role="alert" *ngIf="fg.get('email').errors?.['pattern']">
+			E-mail é inválido
+		</div>
 		<label for="emailSecundario" class="form-label mt-2">E-mail Alternativo</label>
 		<input type="email" formControlName="emailSecundario" class="form-control mt-2" id="emailSecundario" />
+		<div class="mt-3 alert alert-danger" role="alert" *ngIf="fg.get('emailSecundario').errors?.['pattern']">
+			E-mail é inválido
+		</div>
 
-		<button type="submit" class="btn btn-primary mt-5" (click)="submit(userForm)">Salvar</button>
+		<!-- <div class="mt-3 alert alert-danger" role="alert">
+			{{userForm.get('dataAdicionado')?.value | date: 'dd/MM/yyyy HH:mm:ss'}}
+		</div> -->
+
+		<button type="submit" class="btn btn-primary mt-5" [disabled]="userForm.invalid" (click)="submit(userForm.value)">Salvar</button>
+		<div class="mt-4 alert alert-primary" role="alert">
+			{{userForm.value | json}} <br>
+			{{userForm.status | json}} <br>
+			{{userForm.get('nome').value | json}} <br>
+			{{userForm.get('nome').status | json}}
+		</div>
 	</form>
 </div>
