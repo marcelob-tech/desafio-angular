@@ -1,28 +1,28 @@
 {
-  "users": [
-    {
-      "id": 1651,
-      "imgUrl": "",
-      "nome": "xpto",
-      "email": "mhbeta@gmail.com",
-      "emailSecundario": "",
-      "dataAdicionado": "2022-08-11T23:57:08.521Z"
-    },
-    {
-      "id": 2979,
-      "imgUrl": "C:\\fakepath\\moboxAvatar.png",
-      "nome": "xptozxy",
-      "email": "mhbeta@gmail.com",
-      "emailSecundario": "",
-      "dataAdicionado": "2022-08-12T00:02:33.620Z"
-    },
-    {
-      "id": 937,
-      "imgUrl": "",
-      "nome": "xpto",
-      "email": "mebeta@gmail.com",
-      "emailSecundario": "",
-      "dataAdicionado": "2022-08-12T02:23:20.198Z"
-    }
-  ]
+	"users": [
+		{
+			"id": 1651,
+			"imgUrl": "",
+			"nome": "xpto",
+			"email": "mhbeta@gmail.com",
+			"emailSecundario": "xptotest@gmail.com",
+			"dataAdicionado": "2022-08-11T23:57:08.521Z"
+		},
+		{
+			"id": 2979,
+			"imgUrl": "C:\\fakepath\\moboxAvatar.png",
+			"nome": "xptozxy",
+			"email": "mhbeta@gmail.com",
+			"emailSecundario": "xpblabla@gmail.com",
+			"dataAdicionado": "2022-08-12T00:02:33.620Z"
+		},
+		{
+			"id": 937,
+			"imgUrl": "",
+			"nome": "xpto",
+			"email": "mhbeta@gmail.com",
+			"emailSecundario": "fulanoxpto@outlook.com",
+			"dataAdicionado": "2022-08-12T02:23:20.198Z"
+		}
+	]
 }

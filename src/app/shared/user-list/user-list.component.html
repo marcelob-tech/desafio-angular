@@ -1,26 +1,37 @@
-<div class="container d-flex mt-5 justify-content-center">
-	<div class="content flex-column">
-		<app-user-card></app-user-card>
-		<h1>List user</h1>
-		<button type="button" class="btn btn-primary" (click)="navigateToUserForm()">Adicionar usuário</button>
-		<table>
-			<th></th>
-			<th>USER DETAILS</th>
-			<th>ROLE</th>
-			<th>DEPARTAMENT</th>
-			<th>SUBMITS TO </th>
-			<tbody>
-				<tr>
-					<td></td>
-					<td>img</td>
-					<td>
-						nome <br>
-						email <br>
-						email secundario <br>
-						add on 11/08/2022 23:07:04
-					</td>
-				</tr>
-			</tbody>
-		</table>
+<div class="container d-flex flex-column mt-5 justify-content-center">
+	<div class="content">
+		<div class="d-flex justify-content-end mb-3">
+			<button type="button" class="btn btn-primary btn-lg btn-size mt-custom opacity-75 p-custom" (click)="navigateToUserForm()">Adicionar
+				usuário</button>
+		</div>
 	</div>
+	<form [formGroup]="formUserList">
+
+		<div class="cabecalho">
+			<span class="checkAll"><input type="checkbox" formControlName="checkAll" /></span>
+			<span class="w-60 mt-custom"><strong>USER DETAILS</strong></span>
+			<span class="mt-custom"><strong>ROLE</strong></span>
+			<span class="mt-custom"><strong>DEPARTAMENT</strong></span>
+			<span class="mt-custom"><strong>SUBMITS TO </strong></span>
+		</div>
+		<div class="w-100" *ngFor="let card of cardList">
+			<app-user-card [card]="card"></app-user-card>
+		</div>
+	</form>
+
+	<!-- <table>
+		<th></th>
+		<th>USER DETAILS</th>
+		<th>ROLE</th>
+		<th>DEPARTAMENT</th>
+		<th>SUBMITS TO </th>
+		<tbody>
+			<tr *ngFor="let card of cardList">
+				<td>
+					<app-user-card [card]="card"></app-user-card>
+				</td>
+
+			</tr>
+		</tbody> -->
+	<!-- </table> -->
 </div>

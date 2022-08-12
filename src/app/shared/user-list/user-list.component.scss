@@ -1,0 +1,26 @@
+.cabecalho {
+	display: flex;
+	gap: 40px;
+	width: 100%;
+	border-top: 1px solid #00000020;
+	border-bottom: 1px solid #00000020;
+	background-color: #f2f2f2;
+	height: 2.125rem;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.checkAll {
+	margin-left: 16px;
+	margin-top: 8px;
+}
+
+.mt-custom {
+	margin-top: 6px;
+}
+
+.p-custom {
+	padding: 0 40px;
+}

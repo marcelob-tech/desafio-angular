@@ -1,14 +1,20 @@
 <div class="card">
-	<input type="checkbox" />
-	<img class="avatar" src="https://www.w3schools.com/howto/img_avatar.png">
-	<div class="summary">
-		<h3>Xoto Sales</h3>
-		<p>teste@email.com</p>
-		<p>email-alternativo@email.com</p>
-		<span>added 08/08/2022 18:27:49</span>
-	</div>
-	<div class="actions">
-		<button>Editar</button>
-		<button>Excluir</button>
-	</div>
+	<form class="w-100 d-flex" [formGroup]="formUser">
+		<div class="card-body">
+			<input type="checkbox" formControlName="selected" />
+			<img class="avatar" src="https://www.w3schools.com/howto/img_avatar.png">
+			<div class="summary d-flex flex-column">
+				<h3 class="no-margin text-primary opacity-75"><strong>{{card?.nome}}</strong></h3>
+				<span><i class="bi bi-envelope"></i> {{card?.email}}</span>
+				<span><i class="bi bi-envelope-paper"></i><a class="linkEmail opacity-75" href="mailto:{{card?.emailSecundario}}">
+						{{card?.emailSecundario}}
+					</a></span>
+				<small class="small-text">{{card?.dataAdicionado | date:'dd/MM/yyyy HH:mm:ss'}}</small>
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" class="btn btn-primary btn-lg btn-size mt-custom opacity-75 p-0">Editar</button>
+			<button type="button" class="ms-2 btn btn-danger btn-lg btn-size mt-custom p-0">Excluir</button>
+		</div>
+	</form>
 </div>
